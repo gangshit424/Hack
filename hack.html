@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Hacked!</title>
+<style>
+  body {
+    background-color: black;
+    color: red;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    padding-top: 50px;
+    user-select: none;
+  }
+  #blinkText {
+    font-size: 2em;
+    font-weight: bold;
+    animation: blink 1s steps(1) infinite;
+  }
+  @keyframes blink {
+    50% { opacity: 0; }
+  }
+</style>
+</head>
+<body>
+
+<div id="blinkText">Shaco (oe) Ali (Big oe) =hackledi şerefsizler</div>
+
+<script>
+  // Ardışık uyarılar (alert)
+  const alerts = [
+    "Sisteminiz ele geçirildi!",
+    "Verileriniz sızdırılıyor...",
+    "Sistem çöküyor...",
+    " Şaka değil dostum cihazın artık elimde."
+  ];
+
+  let i = 0;
+
+  function showAlert() {
+    if (i < alerts.length) {
+      alert(alerts[i]);
+      i++;
+      setTimeout(showAlert, 500);
+    } else {
+      // Şarkıyı çal
+      const audio = new Audio("https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3");
+      audio.play();
+    }
+  }
+
+  window.onload = function() {
+    showAlert();
+  }
+</script>
+
+</body>
+</html>
